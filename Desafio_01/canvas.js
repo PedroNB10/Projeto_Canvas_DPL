@@ -7,10 +7,13 @@ var c = canvas.getContext('2d'); // c é pincel do canva, ou seja o 'super objec
 for(var quadrados=0,posx=50,posy=30; quadrados<10;quadrados++){
 
 
-    c.fillStyle = 'red'
-    var altura=100;
+     c.fillStyle = 'red'
+     var altura=100;
     var comprimento=100;
+    
+   
     c.fillRect(posx,posy,altura,comprimento); //serve para falar as dimensões
+    
     posx= posx+110;
 
 }
@@ -26,8 +29,8 @@ for(var circulos=0,posx=100,posy=200; circulos<30;circulos++){
     c.beginPath()//inicio do comando 
     c.arc(posx,posy,50,0, Math.PI*2,false)  //c.arc (x, y, tamanho, angulo_inicial, angulo_final, anti_horario)
 
-    // c.strokeStyle = "yellow"
-    // c.stroke()
+     c.strokeStyle = "black"
+     c.stroke()
     c.fillStyle = 'green'
     c.fill()
     posx= posx+110
@@ -43,7 +46,8 @@ for(var circulos=0,posx=100,posy=200; circulos<30;circulos++){
                 
                 c.beginPath()//inicio do comando 
                 c.arc(posx,posy,50,0, Math.PI*2,false)  //c.arc (x, y, tamanho, angulo_inicial, angulo_final, anti_horario)
-                
+                c.strokeStyle = "black"
+                c.stroke()
                 c.fillStyle = 'yellow'
                 c.fill()
                 posx = posx+110
@@ -61,6 +65,8 @@ for(var circulos=0,posx=100,posy=200; circulos<30;circulos++){
                     c.beginPath()//inicio do comando 
                     c.arc(posx,posy,50,0, Math.PI*2,false)  //c.arc (x, y, tamanho, angulo_inicial, angulo_final, anti_horario)
                     // c.stroke()
+                    c.strokeStyle = "black"
+                    c.stroke()
                     c.fillStyle = 'blue'
                     c.fill()
                     posx = posx+110
