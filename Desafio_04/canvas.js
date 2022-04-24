@@ -1,6 +1,6 @@
 var canvas = document.querySelector('canvas'); //funciona com o nome do elemento 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = window.innerHeight-5;//o -5 serve para não desconfigurar a página com uma barra de rolamento
 var c = canvas.getContext('2d'); // c é pincel do canva, ou seja o 'super object'
 
 for(var quadrados=0,altura=50,comprimento=50; quadrados<10;quadrados++){
