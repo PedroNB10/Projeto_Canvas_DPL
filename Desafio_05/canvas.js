@@ -5,9 +5,7 @@ var c = canvas.getContext('2d'); // c é pincel do canva, ou seja o 'super objec
 
 c.fillStyle = "blue";
 c.beginPath();
-const aleatory_number = Math.random()
-
-
+var aleatory_number = Math.random()
 
 c.moveTo(108*aleatory_number, 0.0*aleatory_number);
 c.lineTo(141*aleatory_number, 70*aleatory_number);
@@ -23,15 +21,16 @@ c.lineTo(108*aleatory_number, 0*aleatory_number);
 c.closePath();
 c.fill();
 
+var aleatory_number = Math.random()*2
 c.fillStyle = "red";
 c.beginPath();
-c.moveTo(75, 40);
-c.bezierCurveTo(75, 37, 70, 25, 50, 25);
-c.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
-c.bezierCurveTo(20, 80, 40, 102, 75, 120);
-c.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
-c.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
-c.bezierCurveTo(85, 25, 75, 37, 75, 40);
+c.moveTo(75*aleatory_number, 40*aleatory_number);
+c.bezierCurveTo(75*aleatory_number, 37*aleatory_number, 70*aleatory_number, 25*aleatory_number, 50*aleatory_number, 25*aleatory_number);
+c.bezierCurveTo(20*aleatory_number, 25*aleatory_number, 20*aleatory_number, 62.5*aleatory_number, 20*aleatory_number, 62.5*aleatory_number);
+c.bezierCurveTo(20*aleatory_number, 80*aleatory_number, 40*aleatory_number, 102*aleatory_number, 75*aleatory_number, 120*aleatory_number);
+c.bezierCurveTo(110*aleatory_number, 102*aleatory_number, 130*aleatory_number, 80*aleatory_number, 130*aleatory_number, 62.5*aleatory_number);
+c.bezierCurveTo(130*aleatory_number, 62.5*aleatory_number, 130*aleatory_number, 25*aleatory_number, 100*aleatory_number, 25*aleatory_number);
+c.bezierCurveTo(85*aleatory_number, 25*aleatory_number, 75*aleatory_number, 37*aleatory_number, 75*aleatory_number, 40*aleatory_number);
 c.fill();
 
 
