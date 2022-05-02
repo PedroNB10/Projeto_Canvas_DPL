@@ -9,50 +9,59 @@ var muda_direcao = true
 var x = 0//Posição inicial
 var dx = 4; // velocidade do movimento (seria o aux)
 
+var x_atual=x;
+
 function animate() {
+
+    
     requestAnimationFrame(animate); //fica chamando a função animate
-    c.clearRect(x, 0, innerWidth, innerHeight)//(x,y, onde terminax, onde terminay) // Limpa a tela
+ 
+    c.clearRect(0,0,innerWidth,innerHeight)//(x,y, onde terminax, onde terminay) // Limpa a tela
     c.fillStyle = 'red'//cor de preenchimento do quadrado
-    c.fillRect((innerWidth / 2) - 100, 200, 50, 50); //serve para falar as dimensões
+    c.fillRect(x, 20, 20, 20); //serve para falar as dimensões
 
-    if ((x + 200) >= innerWidth) {
+    if((x +20)  >= innerWidth){
         dx = -dx
     }
+ 
+       
 
-    else if (x < 0) {
-        dx = -dx
+    // else if(x<0) dx = -dx 
+
+    // x  = x +dx;
+
+    else if (x<0){
+        dx = -dx 
     }
+    
+    x  = x +dx;
 
-    x = x + dx;
+  
 
 
 
 }
 
+// animate()
+
+function dontanimate(){
+    c.clearRect(0,0,innerWidth,innerHeight)//(x,y, onde terminax, onde terminay) // Limpa a tela
+    c.fillStyle = 'red'//cor de preenchimento do quadrado
+    c.fillRect(x_atual, 20, 20, 20); //serve para falar as dimensões
+}
+
+
+
 function Mudar_direção() {
     muda_direcao = !muda_direcao
     
     if (muda_direcao == true) {
-        requestAnimationFrame(animate); //fica chamando a função animate
-        c.clearRect(x, 0, innerWidth, innerHeight)//(x,y, onde terminax, onde terminay) // Limpa a tela
-        c.fillStyle = 'red'//cor de preenchimento do quadrado
-        c.fillRect((innerWidth / 2) - 100, 200, 50, 50); //serve para falar as dimensões
-
-        if ((x + 200) >= innerWidth) {
-            dx = -dx
-        }
-
-        else if (x < 0) {
-            dx = -dx
-        }
-
-        x = x + dx;
         animate();
 
     }
 
     if (muda_direcao == false) {
-
+      dontanimate();
     }
 
 
