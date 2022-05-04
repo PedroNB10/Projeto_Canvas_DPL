@@ -9,7 +9,7 @@ var muda_direcao = true
 var x = 0//Posição inicial
 var dx = 4; // velocidade do movimento (seria o aux)
 
-var x_atual=x;
+
 
 function animate() {
 
@@ -45,9 +45,12 @@ function animate() {
 // animate()
 
 function dontanimate(){
+    
+    requestAnimationFrame(dontanimate); //fica chamando a função animate
+ 
     c.clearRect(0,0,innerWidth,innerHeight)//(x,y, onde terminax, onde terminay) // Limpa a tela
     c.fillStyle = 'red'//cor de preenchimento do quadrado
-    c.fillRect(x_atual, 20, 20, 20); //serve para falar as dimensões
+    c.fillRect(x, 20, 20, 20); //serve para falar as dimensões
 }
 
 
@@ -56,11 +59,14 @@ function Mudar_direção() {
     muda_direcao = !muda_direcao
     
     if (muda_direcao == true) {
+        
+        dx=4
         animate();
 
     }
 
     if (muda_direcao == false) {
+        dx =0
       dontanimate();
     }
 
